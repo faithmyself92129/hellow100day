@@ -1,7 +1,13 @@
-"""输入非负整数n，计算N!"""
-n = int(input("输入一个非负整数："))
-m = 1
-for i in range(1,  n+1):
-    m *= i
-print('%d!= %d' % (n, m))
+"""
+输入非负整数n计算n!
 
+Version: 0.1
+Author: 骆昊
+Date: 2018-03-01
+"""
+
+n = int(input('n = '))
+result = 1
+for x in range(1, n + 1):
+    result *= x
+print('%d! = %d' % (n, result))
