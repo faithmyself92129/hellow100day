@@ -1,0 +1,19 @@
+""""验证输入用户和qq号是否有效并给出对应的提示信息"""
+
+import  re
+def main():
+    username = input("请输入用户名：")
+    qq = input('请输入qq号：')
+    m1 = re.match(r'^[0-9a-zA-Z_]{6,20}$', username)
+    if not m1:
+        print('请输入有效地用户名。')
+    m2 = re.match(r'[1-9]\d{4,11}$', qq)
+    if not m2:
+        print('请输入有效地qq号')
+    if m1 and m2:
+        print('你输入的信息是有效的')
+
+if __name__=='__main__':
+    main()
+
+
